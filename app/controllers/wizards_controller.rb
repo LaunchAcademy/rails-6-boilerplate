@@ -1,5 +1,5 @@
 class WizardsController < ApplicationController
-  def show
+  def new
     
   end
 end
