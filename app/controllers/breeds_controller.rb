@@ -1,4 +1,4 @@
-class Api::V1::BreedsController < ApplicationController
+class BreedsController < ApplicationController
   def index
     @breeds = Breed.all
   end
