@@ -1,5 +1,5 @@
-class Breed < ApplicationRecord
+class Pet < ApplicationRecord
   validates :name, :description, presence: true
 
-  belongs_to :pet
+  has_many :breeds
 end
