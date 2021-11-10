@@ -6,6 +6,8 @@ class CreateBreeds < ActiveRecord::Migration[6.1]
       t.string :color
       t.integer :rating
 
+      t.belongs_to :pet, null: false
+
       t.timestamps
     end
   end
