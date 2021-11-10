@@ -1,5 +1,6 @@
 class BreedsController < ApplicationController
   def index
-    @breeds = Breed.all
+    @pet = Pet.find_by_id(params[:pet_id])
+    @breeds = @pet.breeds
   end
 end

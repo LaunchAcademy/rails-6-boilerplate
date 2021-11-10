@@ -20,11 +20,13 @@ ActiveRecord::Schema.define(version: 2021_11_09_205843) do
     t.text "description", null: false
     t.string "color"
     t.integer "rating"
+    t.bigint "pet_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["pet_id"], name: "index_breeds_on_pet_id"
   end
 
-  create_table "species", force: :cascade do |t|
+  create_table "pets", force: :cascade do |t|
     t.string "name", null: false
     t.text "description", null: false
     t.datetime "created_at", precision: 6, null: false

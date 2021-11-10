@@ -1,6 +1,6 @@
-class CreateSpecies < ActiveRecord::Migration[6.1]
+class CreatePets < ActiveRecord::Migration[6.1]
   def change
-    create_table :species do |t|
+    create_table :pets do |t|
       t.string :name, null: false
       t.text :description, null: false
       

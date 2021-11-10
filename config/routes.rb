@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  root "species#index"
+  root "pets#index"
   
-  resources :species, only: [:index, :show] do
-    resources :breeds, only: [:index]
+  resources :pets, only: [:index] do
+    resources :breeds, only: [:index, :show]
   end
 end
